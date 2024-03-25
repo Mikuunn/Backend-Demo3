@@ -16,3 +16,11 @@ model User {
   name     String?
   password String
 }
+
+model Admin {
+  id       String   @id @default(nanoid()) @map("_id")
+  email    String   @unique
+  name     String?
+  password String
+  cvv      String
+}
