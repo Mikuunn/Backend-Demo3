@@ -24,3 +24,12 @@ model Admin {
   password String
   cvv      String
 }
+
+model Post{
+  id String @id @default(nanoid()) @map("_id")
+  image String 
+  title String
+  description String
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+}

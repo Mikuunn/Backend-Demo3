@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild":"prisma generate",
+    "prebuild": "prisma generate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,6 +12,7 @@
   "dependencies": {
     "@apollo/server": "^4.10.1",
     "@as-integrations/next": "^3.0.0",
+    "@graphql-codegen/cli": "^5.0.2",
     "@prisma/client": "^5.11.0",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",

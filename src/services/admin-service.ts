@@ -1,8 +1,6 @@
 import { prisma } from "@/utils/prisma";
 import { GraphQLError } from "graphql";
 
-const adminCvv = "666";
-
 export const getAdmins = async () => {
   try {
     const result = await prisma.admin.findMany();
@@ -29,9 +27,6 @@ export const registerAdmin = async (input: {
   cvv: string;
 }) => {
   try {
-    const cvv = adminCvv;
-    console.log("cvv", cvv);
-
     const result = await prisma.admin.create({ data: input });
     return result;
   } catch (error) {

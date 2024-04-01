@@ -4,13 +4,14 @@ export const adminTypeDefs = gql`
   type Admin {
     id: ID!
     email: String!
-    password: String
-    image: String
+    name: String
+    password: String!
     cvv: String
   }
 
   input AdminRegisterInput {
     email: String!
+    name: String
     password: String!
     cvv: String
   }
